@@ -31,6 +31,8 @@ GITHUB_REPO_OWNER=repository_owner
 GITHUB_REPO_NAME=repository_name
 PACKAGE_NAME=your_package_name
 CHECK_INTERVAL=900000
+DOCKER_AGENT_IMAGE=your_repo_owner/your_repo_name
+DOCKER_AGENT_TAG=your_tag
 ```
 
 > Don't forget to list the `.env` file in the `.gitignore` to avoid accidentally committing it to your repository.

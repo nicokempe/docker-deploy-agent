@@ -1,5 +1,5 @@
 {
-  "name": "docker-deploy-action",
+  "name": "docker-deploy-agent",
   "version": "2023.5.1-dev",
   "description": "Automatic update agent for Docker-based applications on constrained networks.",
   "main": "src/agent.ts",

@@ -29,6 +29,7 @@ nke@alpine:~$ npm install
 GITHUB_TOKEN=your_github_personal_access_token
 GITHUB_REPO_OWNER=repository_owner
 GITHUB_REPO_NAME=repository_name
+PACKAGE_NAME=your_package_name
 CHECK_INTERVAL=900000
 ```
 

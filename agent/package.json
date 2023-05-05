@@ -1,0 +1,28 @@
+{
+  "name": "docker-deploy-action",
+  "version": "2023.5.1-dev",
+  "description": "Automatic update agent for Docker-based applications on constrained networks.",
+  "main": "src/agent.ts",
+  "scripts": {
+    "start": "ts-node src/agent.ts",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicokempe/docker-deploy-agent.git"
+  },
+  "keywords": [
+    "docker",
+    "deployment"
+  ],
+  "author": {
+    "name": "Nico Kempe",
+    "url": "https://www.nicokempe.de",
+    "email": "kontakt@nicokempe.de"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nicokempe/docker-deploy-agent/issues"
+  },
+  "homepage": "https://github.com/nicokempe/docker-deploy-agent#readme"
+}

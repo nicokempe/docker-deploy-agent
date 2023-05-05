@@ -1,0 +1,8 @@
+node_modules/
+.dockerignore
+.git/
+.gitignore
+LICENSE
+README.md
+*.log
+*.env

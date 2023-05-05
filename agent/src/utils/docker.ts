@@ -26,19 +26,19 @@ async function startNewContainer(tag: string): Promise<void> {
     await docker.createContainer(containerConfig).then((container) => container.start());
 }
 
-export async function checkForUpdates(): Promise<string | null> {
+export async function needsUpdate(latestImageTag: string, packageName: string): Promise<boolean> {
     const container = await getContainer();
     if (!container) {
-        return null;
+        return true;
     }
 
     const containerInfo = await container.inspect();
     const currentImage = containerInfo.Image;
 
-    const latestImage = await docker.getImage(`${config.repoOwner}/${config.repoName}`);
+    const latestImage = await docker.getImage(`${config.repoOwner}/${config.repoName}:${latestImageTag}`);
     const latestImageInfo = await latestImage.inspect();
 
-    return currentImage !== latestImageInfo.Id ? latestImageInfo.RepoTags[0].split(':')[1] : null;
+    return currentImage !== latestImageInfo.Id;
 }
 
 export async function deployNewImage(tag: string): Promise<void> {

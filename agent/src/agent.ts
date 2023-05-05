@@ -1,13 +1,15 @@
 import { config } from './config';
-import { checkForUpdates, deployNewImage, rollback } from './utils/docker';
+import { needsUpdate, deployNewImage, rollback } from './utils/docker';
+import { getLatestImage } from './utils/github';
 
 async function main() {
     try {
-        const needsUpdate = await checkForUpdates();
+        const latestImage = await getLatestImage(config.repoName, config.token);
+        const updateRequired = await needsUpdate(latestImage, config.packageName);
 
-        if (needsUpdate) {
+        if (updateRequired) {
             try {
-                await deployNewImage(needsUpdate);
+                await deployNewImage(latestImage);
                 console.log('The Update was successful!');
             } catch (error) {
                 console.error('Update failed, rolling back:', error);

@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  docker-deploy-action:
+    build: .
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
+      - GITHUB_REPO_OWNER=${GITHUB_REPO_OWNER}
+      - GITHUB_REPO_NAME=${GITHUB_REPO_NAME}
+      - PACKAGE_NAME=${PACKAGE_NAME}
+      - CHECK_INTERVAL=${CHECK_INTERVAL}
+    env_file:
+      - .env

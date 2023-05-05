@@ -8,4 +8,4 @@ RUN npm ci
 
 COPY . .
 
-CMD ["npx", "ts-node", "agent.ts"]
+CMD ["npm", "start"]

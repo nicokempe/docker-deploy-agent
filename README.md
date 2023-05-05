@@ -37,9 +37,10 @@ DOCKER_AGENT_TAG=your_tag
 
 > Don't forget to list the `.env` file in the `.gitignore` to avoid accidentally committing it to your repository.
 
-4. Build the agent container and start it with Docker Compose:
+4. Build the agent container, configure it in the .env file and start it with Docker Compose:
 
 ```console
+nke@alpine:~$ docker build -t your_repo_owner/your_repo_name:your_tag .
 nke@alpine:~$ docker-compose up -d
 ```
 

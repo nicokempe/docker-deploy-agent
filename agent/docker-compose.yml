@@ -1,17 +1,12 @@
-version: '3'
+
+version: '3.9'
 
 services:
-  docker-deploy-action:
+  docker-deploy-agent:
     build: .
     restart: always
-    ports:
-      - "3000:3000"
-    environment:
-      - NODE_ENV=production
-      - GITHUB_TOKEN=${GITHUB_TOKEN}
-      - GITHUB_REPO_OWNER=${GITHUB_REPO_OWNER}
-      - GITHUB_REPO_NAME=${GITHUB_REPO_NAME}
-      - PACKAGE_NAME=${PACKAGE_NAME}
-      - CHECK_INTERVAL=${CHECK_INTERVAL}
+    image: ${DOCKER_AGENT_IMAGE}:${DOCKER_AGENT_TAG}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
     env_file:
       - .env

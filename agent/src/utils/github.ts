@@ -3,10 +3,10 @@ import { config } from '../config';
 
 const githubApiBaseUrl = 'https://api.github.com';
 
-export async function getLatestImage(repoOwner: string, repoName: string): Promise<string> {
+export async function getLatestImage(repoOwner: string, repoName: string): Promise<string | null> {
     try {
         const response = await axios.get(
-            `${githubApiBaseUrl}/repos/${repoOwner}/${repoName}/packages/container/${config.packageName}/versions`,
+            `${githubApiBaseUrl}/orgs/${repoOwner}/packages/${config.packageType}/${config.packageName}/versions`,
             {
                 headers: {
                     Accept: 'application/vnd.github+json',
@@ -20,9 +20,14 @@ export async function getLatestImage(repoOwner: string, repoName: string): Promi
         );
 
         const latestVersion = response.data[0];
-        return `${config.packageName}:${latestVersion.name}`;
+        if (!latestVersion) {
+            return null;
+        }
+
+        return `${config.packageName}@${latestVersion.name}`;
     } catch (error) {
         console.error('An error occured fetching the latest image: ', error);
         throw error;
     }
 }
+

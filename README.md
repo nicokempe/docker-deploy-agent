@@ -30,6 +30,7 @@ GITHUB_TOKEN=your_github_personal_access_token
 GITHUB_REPO_OWNER=repository_owner
 GITHUB_REPO_NAME=repository_name
 PACKAGE_NAME=your_package_name
+PACKAGE_TYPE=container
 CHECK_INTERVAL=900000
 DOCKER_AGENT_IMAGE=your_repo_owner/your_repo_name
 DOCKER_AGENT_TAG=your_tag

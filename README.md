@@ -45,6 +45,14 @@ nke@alpine:~$ docker build -t your_repo_owner/your_repo_name:your_tag .
 nke@alpine:~$ docker-compose up -d
 ```
 
+## Docker Hub Repository
+
+The agent container is also available on Docker Hub at https://hub.docker.com/r/nicokempe/docker-deploy-agent. You can pull the image using:
+
+```console
+nke@alpine:~$ docker pull nicokempe/docker-deploy-agent
+```
+
 ## Usage
 
 The agent runs as a standalone Docker container and periodically checks for updates to your application. When an update is available, the agent performs a zero-touch deployment, updating the application to the latest version. If the update fails, the agent features a rollback function to revert to the previous version.

@@ -6,15 +6,27 @@ updates:
       interval: "daily"
       time: "09:00"
       timezone: "Europe/Berlin"
+    assignees:
+      - "nicokempe"
+    reviewers:
+      - "nicokempe"
   - package-ecosystem: "docker"
     directory: "/agent"
     schedule:
       interval: "daily"
       time: "09:00"
       timezone: "Europe/Berlin"
+    assignees:
+      - "nicokempe"
+    reviewers:
+      - "nicokempe"
   - package-ecosystem: "npm"
     directory: "/agent"
     schedule:
       interval: "daily"
       time: "09:00"
       timezone: "Europe/Berlin"
+    assignees:
+      - "nicokempe"
+    reviewers:
+      - "nicokempe"

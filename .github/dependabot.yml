@@ -10,6 +10,8 @@ updates:
       - "nicokempe"
     reviewers:
       - "nicokempe"
+    commit-message:
+      prefix: "[npm] "
   - package-ecosystem: "docker"
     directory: "/agent"
     schedule:
@@ -20,6 +22,8 @@ updates:
       - "nicokempe"
     reviewers:
       - "nicokempe"
+    commit-message:
+      prefix: "[npm] "
   - package-ecosystem: "npm"
     directory: "/agent"
     schedule:
@@ -30,3 +34,5 @@ updates:
       - "nicokempe"
     reviewers:
       - "nicokempe"
+    commit-message:
+      prefix: "[npm] "

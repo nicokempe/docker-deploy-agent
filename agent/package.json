@@ -29,7 +29,7 @@
     "@types/dockerode": "^3.3.38",
     "@types/node": "^22.15.3",
     "ts-node": "^10.9.2",
-    "typescript": "^5.7.3"
+    "typescript": "^5.8.3"
   },
   "dependencies": {
     "axios": "^1.9.0",

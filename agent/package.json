@@ -27,7 +27,7 @@
   "homepage": "https://github.com/nicokempe/docker-deploy-agent#readme",
   "devDependencies": {
     "@types/dockerode": "^3.3.38",
-    "@types/node": "^22.15.12",
+    "@types/node": "^22.15.14",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   },

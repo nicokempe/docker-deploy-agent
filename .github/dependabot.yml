@@ -9,7 +9,7 @@ updates:
     assignees:
       - "nicokempe"
     commit-message:
-      prefix: "chore(npm): "
+      prefix: "chore(actions): "
   - package-ecosystem: "docker"
     directory: "/agent"
     schedule:
